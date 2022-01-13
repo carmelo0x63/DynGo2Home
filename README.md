@@ -47,10 +47,13 @@ $ diff Dockerfile Dockerfile.my
 Default main.py vs. mainpy.my
 ```
 $ diff main.py mainpy.my
-7c7
+7,8c7,8
 < remoteServer = '<user>@<remote_server>'
+< waitTime = 300
 ---
 > remoteServer = 'user@example.org'
+> waitTime = 3600
+27d26
 ```
 
 ## Deploy to Swarm
