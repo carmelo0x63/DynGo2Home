@@ -1,7 +1,7 @@
 # DynGo2Home
 Provides a method to advertise the public IP address so that connecting back home is possible.</br>
-In a similar fashion to some well-known services, this application dynamically updates the value of the public IP as seen from behind your home router.</br>
-<br/>
+In a similar fashion to some well-known services, this application dynamically updates the value of the public IP as seen from behind your home router.
+
 ## Notes
 This application requires SSH access to some server accessible in the public Internet.<br/>
 To achieve this without the need to enter username/password, PKI must be setup between the two nodes as follows.</br>
@@ -47,13 +47,10 @@ $ diff Dockerfile Dockerfile.my
 Default main.py vs. mainpy.my
 ```
 $ diff main.py mainpy.my
-7,8c7,8
+7c7
 < remoteServer = '<user>@<remote_server>'
-< waitTime = 300
 ---
 > remoteServer = 'user@example.org'
-> waitTime = 3600
-27d26
 ```
 
 ## Deploy to Swarm

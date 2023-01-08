@@ -4,9 +4,9 @@ import subprocess, time
 thisHostname = subprocess.check_output(['hostname']).rstrip().decode('utf-8')
 get_name = 'myip.opendns.com'
 get_server = '@resolver1.opendns.com'
-remoteServer = '<user>@<remote_server>'
-waitTime = 300
-privateKey = '/root/.ssh/private.my'         # replace with your own private key
+remoteServer = '<user>@<remote_server>'      # replace with your own account
+waitTime = 3600                              # default interval, 3600s = 1h
+privateKey = '/root/.ssh/private.my'         # place your own private key inside the target file
 knownHosts = '/root/.ssh/known_hosts.my'     # dummy file, placeholder
 
 # Main function, infinite loop
